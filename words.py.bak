@@ -1,0 +1,34 @@
+import random
+
+# Common 5-letter English words (70 words, alphabetically sorted, no duplicates)
+WORD_LIST = [
+    "ABUSE", "ADULT", "AGENT", "ANGER", "AWARD", "BASIS", "BIRTH", "BLOCK", "BLOOD", "BOARD",
+    "BRAIN", "BREAD", "BREAK", "BROWN", "BUYER", "CAUSE", "CHAIN", "CHAIR", "CHEST", "CHIEF",
+    "CHILD", "CHINA", "CLAIM", "CLASS", "CLOCK", "COACH", "COAST", "COURT", "COVER", "CREAM",
+    "CRANE", "CRASH", "CRIME", "CROSS", "CROWD", "CROWN", "CYCLE", "DANCE", "DEATH", "DEPTH",
+    "DOUBT", "DRAFT", "DRAMA", "DREAM", "DRESS", "DRINK", "DRIVE", "EARTH", "ENEMY", "ENTRY",
+    "ERROR", "EVENT", "FAITH", "FAULT", "FIELD", "FINAL", "FLOOR", "FOCUS", "FORCE", "FRAME",
+    "FRANK", "FRONT", "FRUIT", "GLASS", "GRANT", "GRASS", "GREEN", "GROUP", "GUIDE", "HEART",
+    "HORSE", "HOTEL", "HOUSE", "IMAGE", "INDEX", "INPUT", "ISSUE", "JUDGE", "KNIFE", "LAYER",
+    "LEVEL", "LIGHT", "LIMIT", "LUNCH", "MAJOR", "MARCH", "MATCH", "METAL", "MODEL", "MONEY",
+    "MONTH", "MOTOR", "MOUTH", "MUSIC", "NIGHT", "NOISE", "NORTH", "NOVEL", "NURSE", "OFFER",
+    "ORDER", "OTHER", "OWNER", "PANEL", "PAPER", "PARTY", "PEACE", "PETER", "PHASE", "PHONE",
+    "PIECE", "PILOT", "PITCH", "PLACE", "PLANE", "PLANT", "PLATE", "POINT", "POUND", "POWER",
+    "PRESS", "PRICE", "PRIDE", "PRIZE", "PROOF", "PROUD", "QUERY", "RADIO", "RANGE", "RATIO",
+    "REACH", "REPLY", "RIGHT", "RIVER", "ROUND", "ROUTE", "RUGBY", "SCALE", "SCENE", "SCOPE",
+    "SCORE", "SENSE", "SHAPE", "SHARE", "SHEEP", "SHEET", "SHIFT", "SHIRT", "SHOCK", "SIGHT",
+    "SIMON", "SKILL", "SLEEP", "SMILE", "SMOKE", "SOUND", "SOUTH", "SPACE", "SPEED", "SPITE",
+    "SPORT", "SQUAD", "STAFF", "STAGE", "START", "STATE", "STEAM", "STEEL", "STICK", "STILL",
+    "STOCK", "STONE", "STORE", "STUDY", "STUFF", "STYLE", "SUGAR", "TABLE", "TASTE", "THEME",
+    "THING", "TITLE", "TOTAL", "TOUCH", "TOWER", "TRACK", "TRADE", "TRAIN", "TREAT", "TRUCK",
+    "TRUST", "TRUTH", "UNCLE", "UNION", "UNITY", "VALUE", "VIDEO", "VISIT", "VOICE", "WASTE",
+    "WATCH", "WATER", "WHILE", "WHITE", "WHOLE", "WOMAN", "WORLD", "WORRY", "WORSE", "YOUTH"
+]
+
+def get_daily_word() -> str:
+    """Return a random 5-letter word from the word list."""
+    return random.choice(WORD_LIST)
+
+def is_valid_word(word: str) -> bool:
+    """Check if a word is in the word list."""
+    return word.upper() in WORD_LIST
